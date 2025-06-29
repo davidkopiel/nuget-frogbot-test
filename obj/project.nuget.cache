@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Jmpqq/IMpoc=",
+  "dgSpecHash": "f35IJFkydnU=",
   "success": true,
   "projectFilePath": "/Users/davidko/Davidko-Projects/nuget-frogbot-test/nuget-frogbot-test.csproj",
   "expectedPackageFiles": [
-    "/Users/davidko/.nuget/packages/newtonsoft.json/12.0.1/newtonsoft.json.12.0.1.nupkg.sha512"
+    "/Users/davidko/.nuget/packages/newtonsoft.json/12.0.1/newtonsoft.json.12.0.1.nupkg.sha512",
+    "/Users/davidko/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/davidko/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.20/microsoft.netcore.app.host.osx-arm64.7.0.20.nupkg.sha512",
+    "/Users/davidko/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512"
   ],
   "logs": [
     {
@@ -14,7 +17,7 @@
       "message": "Package 'Newtonsoft.Json' 12.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
-        "net9.0"
+        "net7.0"
       ]
     }
   ]
