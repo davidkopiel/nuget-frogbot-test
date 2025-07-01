@@ -6,5 +6,5 @@
     scan:
       projects:
         - workingDirs:
-            - src/nuget-frogbot-test.csproj
+            - src/
             
