@@ -1,0 +1,10 @@
+- params:
+    git:
+      repoName: frogbot-nuget
+      branches:
+        - main
+    scan:
+      projects:
+        - workingDirs:
+            - nuget-frogbot-test/src/nuget-frogbot-test.csproj
+            
