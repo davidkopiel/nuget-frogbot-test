@@ -7,4 +7,5 @@
       projects:
         - workingDirs:
             - src/
-            
+          installCommand: dotnet restore
+  
