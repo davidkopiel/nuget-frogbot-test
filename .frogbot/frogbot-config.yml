@@ -1,11 +1,11 @@
-- params:
-    git:
-      repoName: frogbot-nuget
-      branches:
-        - main
-    scan:
-      projects:
-        - workingDirs:
-            - src/
-          installCommand: dotnet restore
+#- params:
+ #   git:
+  #    repoName: frogbot-nuget
+   #   branches:
+    #    - main
+    #scan:
+     # projects:
+      #  - workingDirs:
+       #     - src/
+        #  installCommand: dotnet restore
   
