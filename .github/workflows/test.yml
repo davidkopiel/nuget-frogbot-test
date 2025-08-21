@@ -19,7 +19,7 @@ jobs:
         env:
           # החלף לכתובת של השרת שלך
           JF_URL: https://idani.jfrog.io
-          
+          JFROG_CLI_LOG_LEVEL: DEBUG
           # ספק את שם ה-Provider וה-Project שהגדרת ב-JFrog
           JF_OIDC_PROVIDER_NAME: github-oidc
           JF_PROJECT: davidka-docker
