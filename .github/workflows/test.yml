@@ -1,6 +1,4 @@
-on : push
-
-
+on: push
 
 jobs:
   jfrog-oidc-scan:
@@ -26,4 +24,10 @@ jobs:
           JF_OIDC_PROVIDER_NAME: github-oidc
           JF_PROJECT: davidka-docker
 
-        
+      # שלב 3: ודא שההתחברות הצליחה
+      - name: Verify Authentication
+        run: jf rt ping
+
+      # שלב 4: הרץ סריקת אבטחה על קוד המקור
+      - name: Run Security Scan
+        run: jf audit
