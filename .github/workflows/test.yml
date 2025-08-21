@@ -1,0 +1,28 @@
+jobs:
+  jfrog-oidc-scan:
+    runs-on: ubuntu-latest
+    
+    # שלב 1: הוספת הרשאות ל-Job
+    permissions:
+      id-token: write
+      contents: read
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # שלב 2: התחברות ל-JFrog באמצעות OIDC
+      - name: Setup JFrog CLI
+        uses: jfrog/setup-jfrog-cli@v4
+        env:
+          # החלף לכתובת של השרת שלך
+          JF_URL: https://idani.jfrog.io
+          
+          # ספק את שם ה-Provider וה-Project שהגדרת ב-JFrog
+          JF_OIDC_PROVIDER_NAME: github-oidc
+          JF_PROJECT: davidka-docker
+
+      # כעת ה-CLI מאומת ומוכן לפעולה
+      - name: Run Docker Scan
+        run: jf docker scan my-image:latest
+        
