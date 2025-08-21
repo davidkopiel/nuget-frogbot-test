@@ -30,4 +30,4 @@ jobs:
 
       # שלב 4: הרץ סריקת אבטחה על קוד המקור
       - name: Run Security Scan
-        run: jf audit
+        run: jf audit --project davidka-docker
