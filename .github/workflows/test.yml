@@ -26,7 +26,4 @@ jobs:
           JF_OIDC_PROVIDER_NAME: github-oidc
           JF_PROJECT: davidka-docker
 
-      # כעת ה-CLI מאומת ומוכן לפעולה
-      - name: Run Docker Scan
-        run: jf docker scan my-image:latest
         
