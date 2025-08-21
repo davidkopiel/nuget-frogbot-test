@@ -1,3 +1,7 @@
+on : push
+
+
+
 jobs:
   jfrog-oidc-scan:
     runs-on: ubuntu-latest
