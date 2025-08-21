@@ -22,7 +22,7 @@ jobs:
           
           # ספק את שם ה-Provider וה-Project שהגדרת ב-JFrog
           JF_OIDC_PROVIDER_NAME: github-oidc
-          JF_PROJECT: davidka-docker
+          JF_PROJECT: dk-docker
 
       # שלב 3: ודא שההתחברות הצליחה
       - name: Verify Authentication
