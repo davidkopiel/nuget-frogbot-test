@@ -17,12 +17,10 @@ jobs:
       - name: Setup JFrog CLI
         uses: jfrog/setup-jfrog-cli@v4
         env:
-          # החלף לכתובת של השרת שלך
           JF_URL: https://idani.jfrog.io
-          JFROG_CLI_LOG_LEVEL: DEBUG
-          # ספק את שם ה-Provider וה-Project שהגדרת ב-JFrog
-          JF_OIDC_PROVIDER_NAME: github-oidc
-          JF_PROJECT: davidka-docker
+        with:
+          oidc-provider-name: github-oidc
+          oidc-audience: jfrog-github
 
       # שלב 3: ודא שההתחברות הצליחה
       - name: Verify Authentication
@@ -30,4 +28,4 @@ jobs:
 
       # שלב 4: הרץ סריקת אבטחה על קוד המקור
       - name: Run Security Scan
-        run: jf audit --project davidka-docker
+        run: jf audit
