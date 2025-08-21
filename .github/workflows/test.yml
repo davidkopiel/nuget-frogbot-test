@@ -17,10 +17,12 @@ jobs:
       - name: Setup JFrog CLI
         uses: jfrog/setup-jfrog-cli@v4
         env:
+          # החלף לכתובת של השרת שלך
           JF_URL: https://idani.jfrog.io
-        with:
-          oidc-provider-name: github-oidc
-          oidc-audience: jfrog-github
+          
+          # ספק את שם ה-Provider וה-Project שהגדרת ב-JFrog
+          JF_OIDC_PROVIDER_NAME: github-oidc
+          JF_PROJECT: davidka-docker
 
       # שלב 3: ודא שההתחברות הצליחה
       - name: Verify Authentication
