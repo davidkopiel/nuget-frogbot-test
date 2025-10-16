@@ -11,13 +11,14 @@
 
 name: "Frogbot Scan Pull Request"
 on:
-  pull_request_target:
-    types: [ opened, synchronize ]
+  schedule:
+    - cron: '*/5 * * * *'
+
 permissions:
   pull-requests: write
   contents: read
 jobs:
-  scan-pull-request:
+  scan-repository:
     runs-on: ubuntu-latest
     # A pull request needs to be approved, before Frogbot scans it. Any GitHub user who is associated with the
     # "frogbot" GitHub environment can approve the pull request to be scanned.
